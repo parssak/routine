@@ -19,9 +19,9 @@ const routineState = atom({
     },
     {
       id: "3",
-      title: "Check News",
+      title: "Duolingo Lesson",
       description: "Check news from the web",
-      color: "orange",
+      color: "green",
       duration_ms: 1000,
     },
   ] as ITask[],

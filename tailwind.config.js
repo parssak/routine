@@ -3,6 +3,8 @@ const safelist = [
   "shadow-orange-300/30",
   "bg-indigo-500",
   "shadow-indigo-300/30",
+  "bg-green-500",
+  "shadow-green-300/30",
 ];
 
 module.exports = {

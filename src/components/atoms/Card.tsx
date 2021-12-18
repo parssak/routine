@@ -31,7 +31,9 @@ export default function Card({ task }: Props): ReactElement {
       justify-between
       transform
       transition-all
-      ${isFirst() ? "scale-105" : ""}
+      relative 
+      top-0
+      ${isFirst() ? "scale-105" : "hover:top-5"}
       `}
       style={{ zIndex: 99 - Number(task.id) }}
       onClick={() => removeTask(task)}
@@ -41,7 +43,9 @@ export default function Card({ task }: Props): ReactElement {
       </div>
       <div className="flex justify-between items-end">
         <h1 className="text-3xl font-semibold">{task.title}</h1>
-        <span className="text-xl">Start &rarr;</span>
+        <span className="text-xl">
+          {isFirst() ? <span>Start &rarr;</span> : `${task.duration_ms} ms`}
+        </span>
       </div>
     </button>
   );
