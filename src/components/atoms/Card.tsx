@@ -8,12 +8,13 @@ interface Props {
 export default function Card({ task }: Props): ReactElement {
   const { routine, removeTask } = useRoutine();
 
+  const getIndex = (): number => {
+    return routine.findIndex((routineTask) => routineTask.id === task.id);
+  };
+
   const isFirst = (): boolean => {
-    return routine.indexOf(task) === 0;
-  }
-
-
-
+    return getIndex() === 0;
+  };
 
   return (
     <button
@@ -23,7 +24,7 @@ export default function Card({ task }: Props): ReactElement {
       h-64
       w-full
       bg-${task.color}-500
-      shadow-${task.color}-300/30
+      shadow-${task.color}-300/10
       shadow-lg
       text-white
       flex
@@ -31,17 +32,22 @@ export default function Card({ task }: Props): ReactElement {
       justify-between
       transform
       transition-all
+      duration-250
       relative 
       top-0
-      ${isFirst() ? "scale-105" : "hover:top-5"}
+      ${isFirst() ? "hover:scale-105" : "hover:top-5"}
       `}
-      style={{ zIndex: 99 - Number(task.id) }}
+      style={{
+        zIndex: 99 - getIndex(),
+        transform: `scale(${1 - 0.01 * getIndex()})`,
+        // opacity: 1 - 0.1 * getIndex(),
+      }}
       onClick={() => removeTask(task)}
     >
-      <div className="flex justify-end relative">
+      <div className="flex w-full justify-end relative">
         <span className="text-lg">{task.duration_ms} ms</span>
       </div>
-      <div className="flex justify-between items-end">
+      <div className="flex w-full justify-between items-end">
         <h1 className="text-3xl font-semibold">{task.title}</h1>
         <span className="text-xl">
           {isFirst() ? <span>Start &rarr;</span> : `${task.duration_ms} ms`}

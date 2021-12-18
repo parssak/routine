@@ -24,6 +24,27 @@ const routineState = atom({
       color: "green",
       duration_ms: 1000,
     },
+    {
+      id: "4",
+      title: "Setup Calendar",
+      description: "Check news from the web",
+      color: "red",
+      duration_ms: 1000,
+    },
+    {
+      id: "5",
+      title: "Workout",
+      description: "Check mail from the web",
+      color: "blue",
+      duration_ms: 2000,
+    },
+    {
+      id: "6",
+      title: "Duolingo Lesson",
+      description: "Check news from the web",
+      color: "green",
+      duration_ms: 1000,
+    },
   ] as ITask[],
 });
 
