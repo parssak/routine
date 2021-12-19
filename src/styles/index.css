@@ -2,6 +2,9 @@
 @import 'tailwindcss/components';
 @import 'tailwindcss/utilities';
 
+*, *::before, *::after {
+  box-sizing: border-box;
+}
 
 .routine-list {
   display: grid;
@@ -9,3 +12,16 @@
   grid-auto-rows: 4rem;
   grid-gap: 1rem;
 }
+
+html {
+  @apply bg-gray-50 dark:bg-zinc-900;
+}
+
+.primary-bg {
+  @apply bg-gray-50 dark:bg-zinc-900 dark:text-white;
+}
+
+.secondary-bg {
+  @apply bg-white dark:bg-zinc-800 dark:text-gray-900;
+}
+

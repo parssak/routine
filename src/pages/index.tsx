@@ -1,16 +1,37 @@
-import RoutineList from "components/molecules/RoutineList";
-import { getDate } from "utils/ui.utils";
+import CommandLine from "components/atoms/CommandLine";
+import Widget from "components/atoms/Widget";
+import MailWidget from "components/molecules/MailWidget";
+import NewsWidget from "components/molecules/NewsWidget";
+import WeatherWidget from "components/molecules/WeatherWidget";
+import { getDate, getGreeting } from "utils/ui.utils";
 
 export default function Home() {
   return (
-    <div className="bg-gray-50 dark:bg-zinc-900 dark:text-white">
-      <main className="container min-h-screen pt-24 ">
-        <div className="max-w-3xl mx-auto">
+    <div
+      className="
+        primary-bg min-h-screen select-none font-mono tracking-tight px-4 
+    "
+    >
+      <div className="max-w-3xl mx-auto pt-36 pb-12 relative">
+        <div className="fixed primary-bg w-full top-0 pt-6 shadow-xl shadow-gray-50 dark:shadow-zinc-900">
           <span>{getDate()}</span>
-          <h1 className="text-4xl font-medium mb-12">Good Morning.</h1>
-          <RoutineList />
+          <h1 className="text-4xl font-medium">{getGreeting()}</h1>
         </div>
-      </main>
+        <div className="space-y-4">
+          <WeatherWidget />
+          <NewsWidget />
+          <MailWidget />
+          <NewsWidget />
+          <WeatherWidget />
+          <NewsWidget />
+          <WeatherWidget />
+          <NewsWidget />
+          <WeatherWidget />
+          <NewsWidget />
+        </div>
+      </div>
+          <CommandLine />
+      
     </div>
   );
 }

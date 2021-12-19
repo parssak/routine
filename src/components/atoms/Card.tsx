@@ -35,11 +35,11 @@ export default function Card({ task }: Props): ReactElement {
       duration-250
       relative 
       top-0
-      ${isFirst() ? "hover:scale-105" : "hover:top-5"}
+      ${isFirst() ? "scale-105 hover:scale-110 focus:scale-110" : "hover:top-5 focus:top-5"}
       `}
       style={{
         zIndex: 99 - getIndex(),
-        transform: `scale(${1 - 0.01 * getIndex()})`,
+        // transform: `scale(${1 - 0.01 * getIndex()})`,
         // opacity: 1 - 0.1 * getIndex(),
       }}
       onClick={() => removeTask(task)}
