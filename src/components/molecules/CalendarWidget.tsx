@@ -7,7 +7,7 @@ interface Props {
 
 export default function CalendarWidget({}: Props): ReactElement {
   return (
-    <Widget title="Calendar">
+    <Widget title="Calendar" className="md:row-span-2">
       <div>
         <h3 className="font-bold">Today:</h3>
         <p>

@@ -25,6 +25,8 @@ export default function Widget({
       outline-none 
       rounded-lg
       focus:shadow-lg
+      bg-white
+      dark:bg-zinc-900
       border-blue-100
       dark:border-blue-500
       focus:border-violet-300

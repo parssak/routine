@@ -48,12 +48,11 @@ export default function CommandLine({}: Props): ReactElement {
     return null;
   }
 
-
   return (
     <div
       className="
     fixed bottom-0 w-full p-1 left-0 right-0 px-4 border-t-4 text-white
-    bg-black border-violet-500
+    bg-black border-violet-500 z-20
     "
     >
       <div className="max-w-5xl mx-auto text-lg">

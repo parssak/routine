@@ -9,14 +9,17 @@ export default function Home() {
   return (
     <div
       className="
-        primary-bg min-h-screen select-none font-mono tracking-tight px-4 
+    primary-bg min-h-screen select-none font-mono tracking-tight px-4 
     "
     >
-      <div className="max-w-5xl mx-auto pt-36 pb-12 relative">
-        <div className="fixed primary-bg w-full top-0 pt-12 shadow-xl shadow-gray-50 dark:shadow-zinc-900">
+      <CommandLine />
+      <div className="fixed primary-bg w-full top-0 left-0 right-0 z-20 px-4">
+        <div className="pt-12 shadow-xl shadow-gray-50 dark:shadow-zinc-900 max-w-5xl mx-auto">
           <span>{getDate()}</span>
           <h1 className="text-4xl font-medium">{getGreeting()}</h1>
         </div>
+      </div>
+      <div className="max-w-5xl mx-auto pt-36 pb-12 relative">
         <div className="grid gap-3 md:grid-cols-2 grid-flow-row-dense">
           <WeatherWidget />
           <NewsWidget />
@@ -24,7 +27,6 @@ export default function Home() {
           <CalendarWidget />
         </div>
       </div>
-      <CommandLine />
     </div>
   );
 }
