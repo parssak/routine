@@ -17,3 +17,11 @@ export const getGreeting = () => {
     return "Good evening";
   }
 }
+
+export const convertDateToAMPM = (date: Date) => {
+  const hour = date.getHours();
+  const minute = date.getMinutes();
+  const ampm = hour >= 12 ? "pm" : "am";
+  const hour12 = hour % 12;
+  return `${hour12}:${minute} ${ampm}`;
+}
