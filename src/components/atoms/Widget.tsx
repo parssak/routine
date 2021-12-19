@@ -23,7 +23,7 @@ export default function Widget({
       transition-all
       border-2
       outline-none 
-      rounded-lg 
+      rounded-lg
       focus:shadow-lg
       border-blue-100
       dark:border-blue-500

@@ -31,10 +31,6 @@ export default function CommandLine({}: Props): ReactElement {
     };
   }, [showCommandLine]);
 
-  if (!showCommandLine) {
-    return null;
-  }
-
   const handleKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {
     if (e.key === "Tab") {
       e.preventDefault();
@@ -44,8 +40,14 @@ export default function CommandLine({}: Props): ReactElement {
       e.preventDefault();
       // if valid URL, open in new tab
       window.open(`https://google.com/search?q=${commandValue}`);
+      setCommandValue("");
     }
   };
+
+  if (!showCommandLine) {
+    return null;
+  }
+
 
   return (
     <div

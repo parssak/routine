@@ -1,5 +1,4 @@
 import CommandLine from "components/atoms/CommandLine";
-import Widget from "components/atoms/Widget";
 import CalendarWidget from "components/molecules/CalendarWidget";
 import MailWidget from "components/molecules/MailWidget";
 import NewsWidget from "components/molecules/NewsWidget";
@@ -18,7 +17,7 @@ export default function Home() {
           <span>{getDate()}</span>
           <h1 className="text-4xl font-medium">{getGreeting()}</h1>
         </div>
-        <div className="grid gap-4 md:grid-cols-2 grid-flow-row-dense">
+        <div className="grid gap-3 md:grid-cols-2 grid-flow-row-dense">
           <WeatherWidget />
           <NewsWidget />
           <MailWidget />
