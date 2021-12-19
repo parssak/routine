@@ -15,7 +15,7 @@ export default function WeatherWidget(): ReactElement {
       {Object.keys(weather).length > 0 ? (
         <>
           <div className="flex justify-between">
-            <p className="font-medium mb-4 font-mono text-blue-700 dark:text-blue-500">
+            <p className="font-medium mb-4 font-mono text-gray-500">
               {weather.name}, {weather.sys.country}
             </p>
             <p className="text-right text-sm text-gray-500">

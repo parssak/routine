@@ -56,7 +56,7 @@ export default function CommandLine({}: Props): ReactElement {
     bg-black border-violet-500
     "
     >
-      <div className="max-w-3xl mx-auto text-lg">
+      <div className="max-w-5xl mx-auto text-lg">
         <input
           type="text"
           className="w-full p-1 bg-transparent outline-none"

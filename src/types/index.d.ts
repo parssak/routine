@@ -6,6 +6,8 @@ interface ITask {
   color: string;
 }
 
+// #region - Weather -
+
 interface Coord {
 	lon: number;
 	lat: number;
@@ -65,3 +67,15 @@ interface IWeatherData {
 	name: string;
 	cod: number;
 }
+
+// #endregion - Weather -
+
+// #region - News - 
+
+export interface INewsArticle {
+	title: string;
+	href: string;
+	imageSrc: string;
+}
+
+// #endregion - News -
