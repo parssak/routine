@@ -1,9 +1,18 @@
 import Widget from "components/atoms/Widget";
-import React, { ReactElement } from "react";
+import useWeather from "hooks/useWeather";
+import React, { ReactElement, useEffect } from "react";
 
 export default function WeatherWidget(): ReactElement {
+  const { weather, getWeather } = useWeather();
+
+  useEffect(() => {
+    getWeather();
+  }, [])
+
+  console.debug(weather)
+
   return (
-    <Widget title="Weather">
+    <Widget title="Weather" className="md:col-span-2">
       <>
         <p className="font-medium mb-4 font-mono text-blue-700 dark:text-blue-500">
           Toronto, ON

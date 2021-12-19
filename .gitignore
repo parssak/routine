@@ -22,7 +22,11 @@ yarn-debug.log*
 yarn-error.log*
 
 # local env files
+# ! undo .env later
+.env 
 .env.local
 .env.development.local
 .env.test.local
 .env.production.local
+
+src/secrets.ts

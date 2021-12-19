@@ -46,7 +46,7 @@ export default function CommandLine({}: Props): ReactElement {
     <div
       className="
     fixed bottom-0 w-full p-1 left-0 right-0 px-4 border-t-4 text-white
-    focus-within:bg-black focus-within:border-yellow-500
+    bg-black border-violet-500
     "
     >
       <div className="max-w-3xl mx-auto text-lg">
