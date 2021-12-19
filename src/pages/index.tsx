@@ -14,7 +14,7 @@ export default function Home() {
     "
     >
       <div className="max-w-3xl mx-auto pt-36 pb-12 relative">
-        <div className="fixed primary-bg w-full top-0 pt-6 shadow-xl shadow-gray-50 dark:shadow-zinc-900">
+        <div className="fixed primary-bg w-full top-0 pt-12 shadow-xl shadow-gray-50 dark:shadow-zinc-900">
           <span>{getDate()}</span>
           <h1 className="text-4xl font-medium">{getGreeting()}</h1>
         </div>

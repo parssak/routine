@@ -3,6 +3,7 @@ import React, { ReactElement, useEffect, useRef, useState } from "react";
 interface Props {}
 
 export default function CommandLine({}: Props): ReactElement {
+  const [commandValue, setCommandValue] = useState("");
   const [showCommandLine, setShowCommandLine] = useState(false);
   const ref = useRef<any>();
 
@@ -39,8 +40,12 @@ export default function CommandLine({}: Props): ReactElement {
       e.preventDefault();
       // automcomplete
     }
+    if (e.key === "Enter") {
+      e.preventDefault();
+      // if valid URL, open in new tab
+      window.open(`https://google.com/search?q=${commandValue}`);
+    }
   };
-
 
   return (
     <div
@@ -54,7 +59,8 @@ export default function CommandLine({}: Props): ReactElement {
           type="text"
           className="w-full p-1 bg-transparent outline-none"
           ref={ref}
-          // on focus end
+          value={commandValue}
+          onChange={(e) => setCommandValue(e.target.value)}
           onBlur={() => setShowCommandLine(false)}
           onKeyDown={handleKeyDown}
         />
