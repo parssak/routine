@@ -36,7 +36,7 @@ interface Wind {
 }
 
 interface Snow {
-	1h: number;
+	"1h": number;
 }
 
 interface Cloud {
@@ -79,3 +79,24 @@ export interface INewsArticle {
 }
 
 // #endregion - News -
+
+// #region - Mail -
+interface ExtraQueryParam {
+	authuser: string;
+}
+
+interface Session_state {
+	extraQueryParams: ExtraQueryParam;
+}
+
+export interface IGoogleAuth {
+	token_type: string;
+	access_token: string;
+	scope: string;
+	login_hint: string;
+	expires_in: number;
+	id_token: string;
+	session_state: Session_state;
+}
+
+// #endregion - Mail -

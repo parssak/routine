@@ -7,7 +7,7 @@ export default function WeatherWidget(): ReactElement {
   const { weather, getWeather } = useWeather();
 
   useEffect(() => {
-    // getWeather();
+    getWeather();
   }, []);
 
   return (
