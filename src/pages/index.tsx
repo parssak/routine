@@ -23,8 +23,8 @@ export default function Home() {
         <div className="grid gap-3 md:grid-cols-2 grid-flow-row-dense">
           <WeatherWidget />
           <NewsWidget />
-          <MailWidget />
           <CalendarWidget />
+          <MailWidget />
         </div>
       </div>
     </div>

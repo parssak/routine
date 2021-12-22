@@ -13,11 +13,18 @@ interface Props {}
 
 export default function MailWidget({}: Props): ReactElement {
   const { auth, storeAuth, isAuthenticated } = useGoogleAuth();
+  const { getMail } = useMail();
+
+  useEffect(() => {
+    if (auth.accessToken) {
+      getMail();
+    }
+  }, [auth]);
 
   return (
     <Widget title="Mail">
       {isAuthenticated() ? (
-        <div>{auth.accessToken}</div>
+        <div>Authenticated</div>
       ) : (
         <GoogleLogin
           clientId={GMAIL_CLIENT_ID}
